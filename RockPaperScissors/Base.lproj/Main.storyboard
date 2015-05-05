@@ -24,6 +24,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="177" y="143" width="40" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="playAsPaper:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ALU-KC-Bpr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdF-d7-619">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -33,6 +36,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="264" y="228" width="57" height="30"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="P86-bb-Yuf" kind="presentation" identifier="playGameSegue" id="den-FJ-ugK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l99-QV-wjT">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -66,7 +72,6 @@
                     <connections>
                         <outlet property="paperButton" destination="q3q-rx-WlS" id="WGc-4f-FIT"/>
                         <outlet property="rockButton" destination="l99-QV-wjT" id="9bm-vX-LTt"/>
-                        <outlet property="scissorsButton" destination="ZdF-d7-619" id="SLs-ex-6gW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -101,6 +106,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="176" y="395" width="48" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="playAgain" destination="P86-bb-Yuf" eventType="touchUpInside" id="8LU-Gb-cJM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -120,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bty-QD-CZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197" y="387"/>
+            <point key="canvasLocation" x="924" y="315"/>
         </scene>
     </scenes>
 </document>

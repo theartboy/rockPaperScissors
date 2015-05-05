@@ -26,7 +26,25 @@ class PlayViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    //storyboard method
+    //right-click on item
+    //select triggered segues
+    //drag to next VC and choose Modal
+    //both storyboard methods may use the same segue
+    @IBAction func playAsScissors(sender: UIButton) {
+        
+    }
+    
+    //code and storyboard method
+    //right-click on VC header button
+    //select triggered segues
+    //drag to next VC and choose Modal
+    //set Storyboard Segue Identifier in properties pane
+    @IBAction func playAsPaper(sender: UIButton) {
+        performSegueWithIdentifier("playGameSegue", sender: self)
+    }
+    
+    //code only method
     @IBAction func playAsRock(sender: UIButton) {
         self.computerChoice = randomDiceValue(3)
         self.playerChoice = 1

@@ -35,5 +35,9 @@ class ResultsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction private func playAgain() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+
 
 }
