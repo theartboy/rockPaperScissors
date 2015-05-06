@@ -37,6 +37,7 @@
                                     <rect key="frame" x="264" y="228" width="57" height="30"/>
                                 </variation>
                                 <connections>
+                                    <action selector="playAsScissors:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oBG-qg-HLf"/>
                                     <segue destination="P86-bb-Yuf" kind="presentation" identifier="playGameSegue" id="den-FJ-ugK"/>
                                 </connections>
                             </button>

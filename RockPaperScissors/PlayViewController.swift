@@ -14,7 +14,7 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var paperButton: UIButton!
     @IBOutlet weak var scissorsButton: UIButton!
     
-    var playerChoice: Int!
+    var playerChoice: String!
     var computerChoice: Int!
     
     override func viewDidLoad() {
@@ -26,13 +26,24 @@ class PlayViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        self.computerChoice = randomDiceValue()
+        //TODO: check for segue name
+        if segue.identifier == "playGameSegue" {
+            let controller = segue.destinationViewController as! ResultsViewController
+            controller.playerChoice = self.playerChoice
+            controller.computerChoice = self.computerChoice
+        }
+    }
+    
     //storyboard method
     //right-click on item
     //select triggered segues
     //drag to next VC and choose Modal
     //both storyboard methods may use the same segue
     @IBAction func playAsScissors(sender: UIButton) {
-        
+        self.playerChoice = sender.titleForState(.Normal)
     }
     
     //code and storyboard method
@@ -41,13 +52,14 @@ class PlayViewController: UIViewController {
     //drag to next VC and choose Modal
     //set Storyboard Segue Identifier in properties pane
     @IBAction func playAsPaper(sender: UIButton) {
+        self.playerChoice = sender.titleForState(.Normal)
         performSegueWithIdentifier("playGameSegue", sender: self)
     }
-    
+
     //code only method
     @IBAction func playAsRock(sender: UIButton) {
-        self.computerChoice = randomDiceValue(3)
-        self.playerChoice = 1
+        self.computerChoice = randomDiceValue()
+        self.playerChoice = sender.titleForState(.Normal)
 
         var controller: ResultsViewController
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultsViewController") as! ResultsViewController
@@ -58,10 +70,9 @@ class PlayViewController: UIViewController {
 
     }
     ////random number generator
-    func randomDiceValue(n: Int) -> Int {
+    func randomDiceValue() -> Int {
         
         // Generate a random Int32 using arc4Random
-        var myNum = Int32(n)
         let randomValue = 1 + arc4random() % 3
         
         // Return a more convenient Int, initialized with the random value

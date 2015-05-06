@@ -9,7 +9,7 @@
 import UIKit
 
 class ResultsViewController: UIViewController {
-    var playerChoice: Int!
+    var playerChoice: String!
     var computerChoice: Int!
 
     override func viewDidLoad() {
