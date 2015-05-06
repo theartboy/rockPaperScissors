@@ -11,6 +11,7 @@ import UIKit
 class ResultsViewController: UIViewController {
     var playerChoice: String!
     var computerChoice: String!
+    @IBOutlet weak var gameImage: UIImageView!
     
     @IBOutlet weak var gameLabel: UILabel!
 
@@ -29,11 +30,13 @@ class ResultsViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         //
         gameLabel.alpha = 0
+        gameImage.alpha = 0
     }
     override func viewDidAppear(animated: Bool) {
         //
         UIView.animateWithDuration(0.5){
             self.gameLabel.alpha = 1
+            self.gameImage.alpha = 1
         }
     }
 
@@ -52,18 +55,25 @@ class ResultsViewController: UIViewController {
             default:
                     s = "Something is broken"
             }
+            gameImage.image = UIImage(named: "tie@2xiphone")
         }else if (playerChoice == "rock" && computerChoice == "scissors"){
             s = "Player wins. Rock crushes Scissors"
+            gameImage.image = UIImage(named: "rockOverScissors@2xiphone")
         }else if (playerChoice == "rock" && computerChoice == "paper"){
             s = "Computer wins. Paper covers Rock"
+            gameImage.image = UIImage(named: "paperOverRock@2xiphone")
         }else if (playerChoice == "paper" && computerChoice == "rock"){
             s = "Player wins. Paper covers Rock"
+            gameImage.image = UIImage(named: "paperOverRock@2xiphone")
         }else if (playerChoice == "paper" && computerChoice == "scissors"){
             s = "Computer wins. Scissors cut Paper"
+            gameImage.image = UIImage(named: "scissorsOverPaper@2xiphone")
         }else if (playerChoice == "scissors" && computerChoice == "paper"){
             s = "Player wins. Scissors cut Paper"
+            gameImage.image = UIImage(named: "scissorsOverPaper@2xiphone")
         }else if (playerChoice == "scissors" && computerChoice == "rock"){
             s = "Computer wins. Rock crushes Scissors"
+            gameImage.image = UIImage(named: "rockOverScissors@2xiphone")
         }
         gameLabel.text = s
     }

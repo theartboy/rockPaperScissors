@@ -13,7 +13,6 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var rockButton: UIButton!
     @IBOutlet weak var paperButton: UIButton!
     @IBOutlet weak var scissorsButton: UIButton!
-    @IBOutlet weak var scoreLabel: UILabel!
     
     var playerChoice: String!
     var computerChoice: String!
@@ -21,6 +20,9 @@ class PlayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        rockButton.setTitle("rock", forState: .Normal)
+        paperButton.setTitle("paper", forState: .Normal)
+        scissorsButton.setTitle("scissors", forState: .Normal)
     }
 
     override func didReceiveMemoryWarning() {

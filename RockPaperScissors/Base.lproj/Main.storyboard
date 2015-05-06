@@ -16,75 +16,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3q-rx-WlS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3q-rx-WlS">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="paper">
+                                <state key="normal" image="paper@2xiphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="177" y="143" width="40" height="30"/>
+                                    <rect key="frame" x="107" y="183" width="150" height="150"/>
                                 </variation>
                                 <connections>
                                     <action selector="playAsPaper:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ALU-KC-Bpr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdF-d7-619">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l99-QV-wjT">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="scissors">
+                                <state key="normal" image="rock@2xiphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="264" y="228" width="57" height="30"/>
+                                    <rect key="frame" x="107" y="54" width="150" height="150"/>
+                                </variation>
+                                <connections>
+                                    <action selector="playAsRock:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Gma-5C-HCy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdF-d7-619">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="scissors@2xiphone">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="107" y="321" width="150" height="150"/>
                                 </variation>
                                 <connections>
                                     <action selector="playAsScissors:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TWX-oC-BhK"/>
                                     <segue destination="P86-bb-Yuf" kind="presentation" identifier="playGameSegue" id="den-FJ-ugK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l99-QV-wjT">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="rock">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="62" y="228" width="30" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="playAsRock:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Gma-5C-HCy"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player: 0  Computer: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAt-e1-pqR">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="66" width="368" height="27"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="q3q-rx-WlS"/>
-                                <exclude reference="ZdF-d7-619"/>
                                 <exclude reference="l99-QV-wjT"/>
-                                <exclude reference="rAt-e1-pqR"/>
+                                <exclude reference="ZdF-d7-619"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="q3q-rx-WlS"/>
-                                <include reference="ZdF-d7-619"/>
                                 <include reference="l99-QV-wjT"/>
-                                <include reference="rAt-e1-pqR"/>
+                                <include reference="ZdF-d7-619"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="paperButton" destination="q3q-rx-WlS" id="WGc-4f-FIT"/>
                         <outlet property="rockButton" destination="l99-QV-wjT" id="9bm-vX-LTt"/>
-                        <outlet property="scoreLabel" destination="rAt-e1-pqR" id="Vb2-R8-HL6"/>
+                        <outlet property="scissorsButton" destination="ZdF-d7-619" id="8WP-Dr-AkN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -108,37 +97,46 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="109" width="368" height="29"/>
+                                    <rect key="frame" x="16" y="79" width="368" height="29"/>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eo4-os-zrZ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="50" y="116" width="300" height="300"/>
+                                </variation>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJh-dV-tQZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Again?">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="176" y="395" width="48" height="30"/>
+                                    <rect key="frame" x="176" y="434" width="48" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="playAgain" destination="P86-bb-Yuf" eventType="touchUpInside" id="8LU-Gb-cJM"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.61495242100000003" green="0.58853359250000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="vkh-QJ-UYb"/>
+                                <exclude reference="eo4-os-zrZ"/>
                                 <exclude reference="LJh-dV-tQZ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="vkh-QJ-UYb"/>
+                                <include reference="eo4-os-zrZ"/>
                                 <include reference="LJh-dV-tQZ"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="gameImage" destination="eo4-os-zrZ" id="1IN-ag-YUO"/>
                         <outlet property="gameLabel" destination="vkh-QJ-UYb" id="seO-Ao-3t9"/>
                     </connections>
                 </viewController>
@@ -147,4 +145,9 @@
             <point key="canvasLocation" x="1143" y="315"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="paper@2xiphone" width="150" height="150"/>
+        <image name="rock@2xiphone" width="150" height="150"/>
+        <image name="scissors@2xiphone" width="150" height="150"/>
+    </resources>
 </document>
