@@ -11,12 +11,12 @@ import UIKit
 class ResultsViewController: UIViewController {
     var playerChoice: String!
     var playerChoiceNum: Int!
-    var computerChoice: Int!
+    var computerChoice: String!
     @IBOutlet weak var gameLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("c: \(self.computerChoice) p: \(self.playerChoice)")
+        println("p: \(self.playerChoice)  c: \(self.computerChoice) ")
         computeWinner()
         // Do any additional setup after loading the view.
     }
@@ -36,17 +36,17 @@ class ResultsViewController: UIViewController {
         }
     }
     func computeWinner(){
-        switch playerChoice {
-            case "rock":
-                playerChoiceNum = 1
-            case "paper":
-                playerChoiceNum = 2
-            case "scissors":
-                playerChoiceNum = 3
-            default:
-                playerChoiceNum = 0
-        }
-        println("c: \(self.computerChoice) p: \(self.playerChoiceNum)")
+//        switch playerChoice {
+//            case "rock":
+//                playerChoiceNum = 1
+//            case "paper":
+//                playerChoiceNum = 2
+//            case "scissors":
+//                playerChoiceNum = 3
+//            default:
+//                playerChoiceNum = 0
+//        }
+//        println("c: \(self.computerChoice) p: \(self.playerChoiceNum)")
 
     }
     /*
