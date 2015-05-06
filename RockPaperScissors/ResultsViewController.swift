@@ -10,13 +10,14 @@ import UIKit
 
 class ResultsViewController: UIViewController {
     var playerChoice: String!
+    var playerChoiceNum: Int!
     var computerChoice: Int!
+    @IBOutlet weak var gameLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.computerChoice = 
         println("c: \(self.computerChoice) p: \(self.playerChoice)")
-
+        computeWinner()
         // Do any additional setup after loading the view.
     }
 
@@ -24,8 +25,30 @@ class ResultsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func viewWillAppear(animated: Bool) {
+        //
+        gameLabel.alpha = 0
+    }
+    override func viewDidAppear(animated: Bool) {
+        //
+        UIView.animateWithDuration(0.5){
+            self.gameLabel.alpha = 1
+        }
+    }
+    func computeWinner(){
+        switch playerChoice {
+            case "rock":
+                playerChoiceNum = 1
+            case "paper":
+                playerChoiceNum = 2
+            case "scissors":
+                playerChoiceNum = 3
+            default:
+                playerChoiceNum = 0
+        }
+        println("c: \(self.computerChoice) p: \(self.playerChoiceNum)")
 
+    }
     /*
     // MARK: - Navigation
 
@@ -38,6 +61,6 @@ class ResultsViewController: UIViewController {
     @IBAction private func playAgain() {
         dismissViewControllerAnimated(true, completion: nil)
     }
-
+    
 
 }

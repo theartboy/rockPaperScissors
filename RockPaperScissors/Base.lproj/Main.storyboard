@@ -126,6 +126,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="gameLabel" destination="vkh-QJ-UYb" id="seO-Ao-3t9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bty-QD-CZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
