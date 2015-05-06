@@ -11,16 +11,12 @@ import UIKit
 class ResultsViewController: UIViewController {
     var playerChoice: String!
     var computerChoice: String!
-    var playerScore: Int!
-    var computerScore: Int!
     
     @IBOutlet weak var gameLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         println("p: \(self.playerChoice)  c: \(self.computerChoice) ")
-//        playerScore = 0
-//        computerScore = 0
         computeWinner()
         
         // Do any additional setup after loading the view.
@@ -58,25 +54,18 @@ class ResultsViewController: UIViewController {
             }
         }else if (playerChoice == "rock" && computerChoice == "scissors"){
             s = "Player wins. Rock crushes Scissors"
-            playerScore = playerScore + 1
         }else if (playerChoice == "rock" && computerChoice == "paper"){
             s = "Computer wins. Paper covers Rock"
-            computerScore = computerScore + 1
         }else if (playerChoice == "paper" && computerChoice == "rock"){
             s = "Player wins. Paper covers Rock"
-            playerScore = playerScore + 1
         }else if (playerChoice == "paper" && computerChoice == "scissors"){
             s = "Computer wins. Scissors cut Paper"
-            computerScore = computerScore + 1
         }else if (playerChoice == "scissors" && computerChoice == "paper"){
             s = "Player wins. Scissors cut Paper"
-            playerScore = playerScore + 1
         }else if (playerChoice == "scissors" && computerChoice == "rock"){
             s = "Computer wins. Rock crushes Scissors"
-            computerScore = computerScore + 1
         }
         gameLabel.text = s
-        println("p \(playerScore)   c \(computerScore)")
     }
     /*
     // MARK: - Navigation
@@ -91,12 +80,8 @@ class ResultsViewController: UIViewController {
     @IBAction private func playAgain() {
         var controller: PlayViewController
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("PlayViewController") as! PlayViewController
-        controller.playerScore = self.playerScore
-        controller.computerScore = self.computerScore
-//        controller.updateScoreLabel()
-//        controller.scoreLabel.text = "PPlayer: \(self.playerScore)   Computer: \(self.computerScore)"
 
-        dismissViewControllerAnimated(true, completion: controller.updateScoreLabel)
+        dismissViewControllerAnimated(true, completion: nil)
         
     }
     

@@ -17,35 +17,23 @@ class PlayViewController: UIViewController {
     
     var playerChoice: String!
     var computerChoice: String!
-    var playerScore = 0
-    var computerScore = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        playerScore = 0
-//        computerScore = 0
-        scoreLabel.text = "Player: \(playerScore)   Computer: \(computerScore)"
-//        println("Player: \(playerScore)   Computer: \(computerScore)")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-//    override func viewWillAppear(animated: Bool) {
-//        scoreLabel.text = "Player: \(playerScore)   Computer: \(computerScore)"
-//        println("Player: \(playerScore)   Computer: \(computerScore)")
-//    }
+
     func getPlayer(sender: UIButton) ->String{
         var s = sender.titleForState(.Normal)
         return String(s!)
     }
-    func updateScoreLabel(){
-//        scoreLabel.text = "Player: is   Computer: "
-//        scoreLabel.text = "Player: \(self.playerScore)   Computer: \(self.computerScore)"
-        
-    }
+    
+    
     
     ///////////////////////////
     //storyboard method
@@ -65,8 +53,6 @@ class PlayViewController: UIViewController {
             let controller = segue.destinationViewController as! ResultsViewController
             controller.playerChoice = self.playerChoice
             controller.computerChoice = self.computerChoice
-            controller.playerScore = self.playerScore
-            controller.computerScore = self.computerScore
         }
     }
     
@@ -93,8 +79,6 @@ class PlayViewController: UIViewController {
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultsViewController") as! ResultsViewController
         controller.computerChoice = self.computerChoice
         controller.playerChoice = self.playerChoice
-        controller.playerScore = self.playerScore
-        controller.computerScore = self.computerScore
 
         self.presentViewController(controller, animated: true, completion: nil)
 
@@ -107,7 +91,6 @@ class PlayViewController: UIViewController {
         var randomValue = Int(arc4random() % 3)
         // Return a more convenient Int, initialized with the random value
         println("rv: \(randomValue) and \(items[randomValue])")
-        println("Player is: \(playerScore)   Computer is: \(computerScore)")
         return String(items[randomValue])
     }
     ////random number generator
