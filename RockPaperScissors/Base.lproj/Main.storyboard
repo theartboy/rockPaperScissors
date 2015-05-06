@@ -53,13 +53,23 @@
                                     <action selector="playAsRock:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Gma-5C-HCy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player: 0  Computer: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAt-e1-pqR">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="66" width="368" height="27"/>
+                                </variation>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="q3q-rx-WlS"/>
                                 <exclude reference="ZdF-d7-619"/>
                                 <exclude reference="l99-QV-wjT"/>
+                                <exclude reference="rAt-e1-pqR"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -67,12 +77,14 @@
                                 <include reference="q3q-rx-WlS"/>
                                 <include reference="ZdF-d7-619"/>
                                 <include reference="l99-QV-wjT"/>
+                                <include reference="rAt-e1-pqR"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="paperButton" destination="q3q-rx-WlS" id="WGc-4f-FIT"/>
                         <outlet property="rockButton" destination="l99-QV-wjT" id="9bm-vX-LTt"/>
+                        <outlet property="scoreLabel" destination="rAt-e1-pqR" id="Vb2-R8-HL6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -112,7 +124,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.61495242100000003" green="0.58853359250000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="vkh-QJ-UYb"/>
@@ -132,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bty-QD-CZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="315"/>
+            <point key="canvasLocation" x="1143" y="315"/>
         </scene>
     </scenes>
 </document>
